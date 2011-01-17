@@ -3,6 +3,7 @@
 <head>
 	<title>Life Figure-Outer Application</title>
 	<link rel="stylesheet" media="all" type="text/css" href="styles.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -14,13 +15,13 @@
 	
 	</div>	
 	<div id="navigation">
-		<a href="#">Home</a>
-		<a href="#">Interests</a>
-		<a href="#">Health</a>
-		<a href="#">Academic</a>
-		<a href="#">Professional</a>
-		<a href="#">Fun</a>
-		<a href="#">Evil</a>
+		<a href="#" title="HOME?! Who includes a home link anymore?">Home</a>
+		<a href="#" title="Not like anyone cares">Interests</a>
+		<a href="#" title="I'm very healthy">Health</a>
+		<a href="#" title="I got nothing clever">Academic</a>
+		<a href="#" title="Professions: baller, scuba diver, grocery bagger">Professional</a>
+		<a href="#" title="Having fun is fun">Fun</a>
+		<a href="#" title="Big brother isn't evil, just misguided">Evil</a>
 	</div>
 	</div>
 	<div id="content-wrapper">
@@ -36,7 +37,7 @@
 		<form>
 		<div>
 			<label for="howFeel">How do you feel today?</label>
-			<input type="text" name="howFeel" />
+			<input type="text" name="howFeel" id="howFeel" />
 		</div>
 		<div>		
 			<label for="likeFeel">How would you like to feel? (choose all that apply)</label>
@@ -60,5 +61,15 @@
 	</div>
 	</div>
 </body>
+<script type="text/javascript">
+$(document).ready( function() {
+	$("#feelMe").click( function(e) {
+		e.preventDefault();
+		if( $("#howFeel").val() == '' ) {
+			alert("Surely you feel something!");
+		}
+	});
+});
+</script>
 
 </html>
