@@ -1,3 +1,4 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
 	<title>Life Figure-Outer Application</title>
@@ -23,34 +24,38 @@
 	</div>
 	</div>
 	<div id="content-wrapper">
-		<div>
+		<div class="rightBar">
 			<h2>Current Progress in Life</h2>
-			<ul>
-				<li>Mediocre. You really should enjoy life more.</li>
-			</ul>
+			<p>
+				Mediocre. You really should enjoy life more.
+			</p>
 		</div>
 		
 		<h1>Lorem Ipsum Dolor Sit Amet.</h1>
 		
 		<form>
-		<label for="">How do you feel today?</label>
-		<input type="text" />
-		<label for="">How would you like to feel? (choose all that apply)</label>
-		<select>
-			<option value="">Comfortably numb</option>
-			<option value="">Grumpy as poop, you jerk</option>
-			<option value="">Happy like I'm on controlled substances</option>
-			<option value="">Normal. Absolutely Normal.</option>
-		</select>
+		<div>
+			<label for="howFeel">How do you feel today?</label>
+			<input type="text" name="howFeel" />
+		</div>
+		<div>		
+			<label for="likeFeel">How would you like to feel? (choose all that apply)</label>
+			<select multiple="multiple" name="likeFeel">
+				<option value="">Comfortably numb</option>
+				<option value="">Grumpy as poop, you jerk</option>
+				<option value="">Happy like I'm on controlled substances</option>
+				<option value="">Normal. Absolutely Normal.</option>
+			</select>
+		</div>
 
-		<button>Feel me!</button>
+		<button id="feelMe">Feel me!</button>
 		</form>	
 		
 	</div>
 
-	<div>
+	<div id="footer">
 		<p>
-		(c) 2011 Borg-Like Monstrosity of Mind Control, Inc. All rights reserved.
+		&copy; 2011 Borg-Like Monstrosity of Mind Control, Inc. All rights reserved.
 		</p>
 	</div>
 	</div>
