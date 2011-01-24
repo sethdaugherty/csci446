@@ -1,7 +1,9 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
 	<title>Life Figure-Outer Application</title>
 	<link rel="stylesheet" media="all" type="text/css" href="styles.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -13,47 +15,61 @@
 	
 	</div>	
 	<div id="navigation">
-		<a href="#">Home</a>
-		<a href="#">Interests</a>
-		<a href="#">Health</a>
-		<a href="#">Academic</a>
-		<a href="#">Professional</a>
-		<a href="#">Fun</a>
-		<a href="#">Evil</a>
+		<a href="#" title="HOME?! Who includes a home link anymore?">Home</a>
+		<a href="#" title="Not like anyone cares">Interests</a>
+		<a href="#" title="I'm very healthy">Health</a>
+		<a href="#" title="I got nothing clever">Academic</a>
+		<a href="#" title="Professions: baller, scuba diver, grocery bagger">Professional</a>
+		<a href="#" title="Having fun is fun">Fun</a>
+		<a href="#" title="Big brother isn't evil, just misguided">Evil</a>
 	</div>
 	</div>
 	<div id="content-wrapper">
-		<div>
+		<div class="rightBar">
 			<h2>Current Progress in Life</h2>
-			<ul>
-				<li>Mediocre. You really should enjoy life more.</li>
-			</ul>
+			<p>
+				Mediocre. You really should enjoy life more.
+			</p>
 		</div>
 		
 		<h1>Lorem Ipsum Dolor Sit Amet.</h1>
 		
 		<form>
-		<label for="">How do you feel today?</label>
-		<input type="text" />
-		<label for="">How would you like to feel? (choose all that apply)</label>
-		<select>
-			<option value="">Comfortably numb</option>
-			<option value="">Grumpy as poop, you jerk</option>
-			<option value="">Happy like I'm on controlled substances</option>
-			<option value="">Normal. Absolutely Normal.</option>
-		</select>
+		<div>
+			<label for="howFeel">How do you feel today?</label>
+			<input type="text" name="howFeel" id="howFeel" />
+		</div>
+		<div>		
+			<label for="likeFeel">How would you like to feel? (choose all that apply)</label>
+			<select multiple="multiple" name="likeFeel">
+				<option value="">Comfortably numb</option>
+				<option value="">Grumpy as poop, you jerk</option>
+				<option value="">Happy like I'm on controlled substances</option>
+				<option value="">Normal. Absolutely Normal.</option>
+			</select>
+		</div>
 
-		<button>Feel me!</button>
+		<button id="feelMe">Feel me!</button>
 		</form>	
 		
 	</div>
 
-	<div>
+	<div id="footer">
 		<p>
-		(c) 2011 Borg-Like Monstrosity of Mind Control, Inc. All rights reserved.
+		&copy; 2011 Borg-Like Monstrosity of Mind Control, Inc. All rights reserved.
 		</p>
 	</div>
 	</div>
 </body>
+<script type="text/javascript">
+$(document).ready( function() {
+	$("#feelMe").click( function(e) {
+		e.preventDefault();
+		if( $("#howFeel").val() == '' ) {
+			alert("Surely you feel something!");
+		}
+	});
+});
+</script>
 
 </html>

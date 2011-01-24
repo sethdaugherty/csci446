@@ -6,7 +6,7 @@ body {
 }
 
 div.wrapper {
-	width: 1008;
+	width: 1008px;
 	border: 1px solid black;
 	margin: 0px auto;
 }
@@ -57,4 +57,62 @@ p.tagline {
 
 #content-wrapper {
 	background: #fcfcfc;
+	padding: 10px;
+}
+
+.rightBar {
+	width: 337px;
+	display: block;
+	float: right;
+	background: #f0f1ff;
+	padding: 1px 4px;
+}
+
+.rightBar h2 {
+	font-size: 1.18em;
+	font-weight: bold;
+	margin: 0;
+}
+
+.rightBar p {
+	margin: 14px 0;
+}
+
+h1 {
+	font-size: 1.48em;
+	padding: 0px;
+	margin: -4px 0px 0px;
+}
+
+form {
+	margin: 14px 0px;
+}
+
+form div {
+	margin-bottom: 20px;
+}
+
+label {
+	width: 200px;
+	float: left;
+}
+
+select {
+	font-size: .74em;
+}
+
+#feelMe {
+	margin-left: 200px;
+}
+
+#footer {
+	background: #f0f0f0;	
+	text-align: center;
+	padding: 8px;
+}
+
+#footer p {
+	margin: 0px;
+	padding: 0px;
+	font-size: .8em;
 }
