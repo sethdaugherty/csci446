@@ -1,7 +1,10 @@
 class Product < ActiveRecord::Base
-  def self.find_products_for_sale
+	has_many :orders, :through => :line_items
+	def self.find_products_for_sale
     find(:all, :order => "title" )
   end
+
+	has_many :line_items
 
   validates_presence_of :title, :description, :image_url
   validates_numericality_of :price
