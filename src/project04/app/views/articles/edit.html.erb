@@ -1,0 +1,31 @@
+<h1>Articl.es</h1>
+<p class="tagline">... my cousin works for Bit.ly</p>
+
+<h2>Editing article</h2>
+
+<% form_for(@article) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :editedCount %><br />
+    <%= f.text_field :editedCount %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @article %> |
+<%= link_to 'Back', articles_path %>

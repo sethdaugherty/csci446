@@ -1,0 +1,27 @@
+<h1>Article.es</h1>
+<p class="tagline">...with a name .com hipsters love</p>
+
+<h2>All the World's Articles</h2>
+
+<%= link_to 'New article', new_article_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Author Name</th>
+    <th>Body</th>
+  </tr>
+
+<% @articles.each do |article| %>
+  <tr>
+    <td><%=h article.title %></td>
+    <td><%=h article.author %></td>
+    <td><%=h article.body %></td>
+    <td><%= link_to 'Show', article %></td>
+    <td><%= link_to 'Edit', edit_article_path(article) %></td>
+    <td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= pluralize(@articles.count, "article") %>

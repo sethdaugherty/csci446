@@ -1,0 +1,35 @@
+<h1>Articl.es</h1>
+<p class="tagline">... what's "Articl" in Spanish anyway?</p>
+
+
+<div class="toolbar">
+    <ul>
+        <li>
+            <%= link_to 'List all articles', articles_path %>
+        </li>
+        <li>
+            <%= link_to 'Edit', edit_article_path(@article) %>
+        </li>
+        <li>
+            <%= link_to 'Delete', @article, :confirm => 'Are you sure?', :method => :delete %>
+        </li>
+        <li>
+            <a href="#">Email</a>
+        </li>
+    </ul>
+</div>
+
+<h2><%=h @article.title %></h2>
+   
+
+<p class="byline">
+  by <%=h @article.author %>, <%= @article.editedCount %> edits since 
+  <%=h @article.created_at %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @article.body %>
+</p>
+
+
