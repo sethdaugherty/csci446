@@ -1,5 +1,9 @@
-<h1>Articl.es</h1>
-<p class="tagline">... not just for the country of Spain</p>
+<div class="header">
+    <h1>Articl.es</h1>
+    <p class="tagline">... not just for the country of Spain</p>
+</div>
+
+<%= link_to 'Back', articles_path, :title => "Back to previous page" %>
 
 <h2>Creating a New Article</h2>
 
@@ -22,5 +26,3 @@
     <%= f.submit 'Create' %>
   </p>
 <% end %>
-
-<%= link_to 'Back', articles_path %>

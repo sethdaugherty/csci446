@@ -1,9 +1,13 @@
-<h1>Articl.es</h1>
-<p class="tagline">... my cousin works for Bit.ly</p>
+<div class="header">
+    <h1>Articl.es</h1>
+    <p class="tagline">... my cousin works for Bit.ly</p>
+</div>
 
-<h2>Editing article</h2>
+<%= link_to 'Back', :back, :title => "Back" %>
 
 <% form_for(@article) do |f| %>
+  <h2>Editing "<%= @article.title %>"</h2>
+
   <%= f.error_messages %>
 
   <p>
@@ -19,13 +23,6 @@
     <%= f.text_area :body %>
   </p>
   <p>
-    <%= f.label :editedCount %><br />
-    <%= f.text_field :editedCount %>
-  </p>
-  <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>
-
-<%= link_to 'Show', @article %> |
-<%= link_to 'Back', articles_path %>

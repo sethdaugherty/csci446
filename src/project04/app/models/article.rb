@@ -7,4 +7,5 @@ class Article < ActiveRecord::Base
     def no_sally
         errors.add(:author, 'can\'t be Sally') if author =~ /\b[Ss]ally\b/
     end
+
 end

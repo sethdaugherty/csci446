@@ -9,13 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110205230038) do
+ActiveRecord::Schema.define(:version => 20110206002200) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.string   "author"
     t.text     "body"
-    t.integer  "editedCount"
+    t.integer  "editedCount", :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

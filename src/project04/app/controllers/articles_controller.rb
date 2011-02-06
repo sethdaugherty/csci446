@@ -35,7 +35,8 @@ class ArticlesController < ApplicationController
   # GET /articles/1/edit
   def edit
     @article = Article.find(params[:id])
-  end
+    session[:last_page] = request.env['HTTP_REFERER'] 
+end
 
   # POST /articles
   # POST /articles.xml
@@ -58,11 +59,12 @@ class ArticlesController < ApplicationController
   # PUT /articles/1.xml
   def update
     @article = Article.find(params[:id])
+    @article.editedCount += 1
 
     respond_to do |format|
       if @article.update_attributes(params[:article])
         flash[:notice] = 'Article was successfully updated.'
-        format.html { redirect_to(@article) }
+        format.html { redirect_to(session[:last_page]) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -82,4 +84,5 @@ class ArticlesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
 end
