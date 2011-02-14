@@ -42,5 +42,6 @@ Rails::Initializer.run do |config|
 	# Lets make sure we get the gem for pagination
 	config.gem 'mislav-will_paginate', :version => '~> 2.3.2', 
 		:lib => 'will_paginate', :source => 'http://gems.github.com'
+	config.gem "haml"
 end
 

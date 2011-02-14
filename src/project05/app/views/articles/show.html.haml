@@ -1,8 +1,6 @@
-<div class="header">
-    <h1>Articl.es</h1>
-    <p class="tagline">... what's "Articl" in Spanish anyway?</p>
-</div>
-
+.header
+	%h1 Articl.es
+	%p.tagline ... what's "Articl" in Spanish anywan?
 
 <div class="toolbar">
     <ul>
@@ -25,7 +23,7 @@
    
 
 <p class="byline">
-  by <%=h @article.author %>, <%= @article.editedCount %> edits since 
+  by <%=h @article.author.name %>, <%= @article.editedCount %> edits since 
   <%=h @article.created_at.strftime("%b. %d, %Y") %>
 </p>
 

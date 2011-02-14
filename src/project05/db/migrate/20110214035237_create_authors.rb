@@ -2,8 +2,6 @@ class CreateAuthors < ActiveRecord::Migration
   def self.up
     create_table :authors do |t|
       t.string :name
-      t.string :image_url
-
       t.timestamps
     end
 		
@@ -27,7 +25,7 @@ class CreateAuthors < ActiveRecord::Migration
 		@articles = Article.find(:all)
 		@articles.each do |article|
 			author = Author.find(:first, :conditions => ["id = ?", article.author_id])
-			article.author = author.name
+			article.author = author
 			article.save
 		end
 		remove_column :articles, :author_id

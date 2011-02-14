@@ -21,7 +21,7 @@
   
   <tr class="<%= cycle("row1", "row2") %>">
     <td><%=h article.title %></td>
-    <td><%=h article.author %></td>
+    <td><%=h article.author.name %></td>
     <td><%=h truncate(article.body, :length => 75) %></td>
     <td class="tools"><%= link_to image_tag('zoom.png'), article, :title => "View" %></td>
     <td class="tools"><%= link_to image_tag('page_edit.png'), edit_article_path(article), :title => "Edit" %></td>

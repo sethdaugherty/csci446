@@ -1,0 +1,16 @@
+%h1= @author.name
+%br 
+
+%div= image_tag @author.photo.url 
+%br
+%h2 
+	Articles by 
+	= @author.name
+%ul
+	- @author.articles.each do |article| 
+		%li= article.title 
+
+%div
+	= link_to 'Edit', edit_author_path(@author) 
+	|
+	= link_to 'Back', authors_path

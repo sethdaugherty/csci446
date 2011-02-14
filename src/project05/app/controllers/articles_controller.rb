@@ -2,10 +2,8 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.xml
   def index
-    #@articles = Article.all
 		@articles = Article.paginate :page => params[:page], :order => 'title', :per_page => 10 
-
-    respond_to do |format|
+		respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @articles }
     end
@@ -85,5 +83,10 @@ end
       format.xml  { head :ok }
     end
   end
+
+	def self.get_authors
+		# Array to store the list of all the authors
+		return Author.find(:all, :order => "name")
+	end
 
 end
