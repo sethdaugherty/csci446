@@ -29,5 +29,25 @@ Articles = Article.create( [
         {:title => "Pentagon Sets Tone For Future Space Exploration",
          :author => "coondoggie",
          :body => "It obviously leans heavily on the military's concerns for outer space exploration, but the National Security Space Strategy (PDF) released yesterday by the Department of Defense outlines concerns like protection from space junk and system security that all space travelers in theory would want addressed. The NSSS document emphasizes the Obama administration's desire to protect US space assets and to further commercialize space but also to ensure that the US and international partners have unfettered access to outer space."
-        }
+        },
+				{:title => "The Most Violent Video Games of All Time",
+				 :author => "adeelarshad82",
+				 :body => "Switzerland and Australia already feel that violent video games are an issue, and in June the US Supreme Court will also take matters in its own hands. Revisiting some of the most violent video games made over the last couple of decades shows exactly why this is such a huge concern."
+				},
+				{:title => "Two Huge Holes in the Sun Spotted",
+				 :author => "an anonymous reader",
+				 :body => "Japanese scientists have spotted two huge holes on the sun's magnetic field, and it appears there is some reason to be concerned about. The holes, called coronal holes, are gateways for solar material and gas to spill out into space, according to space.com. The gaps in the sun's magnetic field make a hole through its atmosphere, letting gas out, NASA has said."
+				},
+				{:title => "The Dirty Little Secrets of Search", 
+				 :author => "Hugh Pickens",
+				 :body => "The NY Times has an interesting story (reg. may be required) about how J. C. Penny used link farms to become the number one google search result for such terms as 'dresses,' 'bedding,' and 'samsonite carry on luggage' and what google did to them when they found out. 'Actually, it's the most ambitious attempt I've ever heard of,' says Doug Pierce, an expert in online search. 'This whole thing just blew me away. Especially for such a major brand. You'd think they would have people around them that would know better.'"
+				},
+				{:title => "Anonymous Claims Possession of Stuxnet Worm",
+				 :author => "an anonymous reader",
+				 :body => "Last night, a member of hacker group Anonymous announced on Twitter that the group was in possession of the Stuxnet worm. Recently, Anonymous has been in the news for its high profile attacks on software security firm HBGary, after Aaron Barr, the CEO of HBGary's sister firm HBGary Federal, claimed to have acquired the names of senior Anonymous members and threatened to release them to the public. This is where the possibility for Anonymous getting its hands on Stuxnet increases."
+				},
+				{:title => "Pandora Files for IPO",
+				 :author => "itwbennett",
+				 :body => "Internet radio service Pandora Media on Friday filed documents with the SEC for an initial public offering of common stock. In its S-1 filing, Pandora said it has more than 80 million registered users and a more than '50% share of all internet radio listening time among the top 20 stations and networks in the United States.' While Pandora said the 'number of shares to be offered and the price range for the offering have not yet been determined,' MarketWatch reports that the music service hopes to raise up to $100 million."
+				}
     ])
