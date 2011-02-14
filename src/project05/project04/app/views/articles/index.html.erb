@@ -1,0 +1,35 @@
+<div class="header">
+    <h1>Articl.es</h1>
+    <p class="tagline">...with a name .com hipsters love</p>
+</div>
+
+<div class="byline">
+<h2>All the World's Articles</h2>
+
+<%= link_to image_tag("add.png") + ' New article', new_article_path, :title => "Create a new article" %>
+</div>
+
+<div class="tableWrapper">
+<table class="articles">
+  <tr>
+    <th>Title</th>
+    <th>Author Name</th>
+    <th>Body</th>
+  </tr>
+  <tbody>
+<% @articles.each do |article| %>
+  
+  <tr class="<%= cycle("row1", "row2") %>">
+    <td><%=h article.title %></td>
+    <td><%=h article.author %></td>
+    <td><%=h truncate(article.body, :length => 75) %></td>
+    <td class="tools"><%= link_to image_tag('zoom.png'), article, :title => "View" %></td>
+    <td class="tools"><%= link_to image_tag('page_edit.png'), edit_article_path(article), :title => "Edit" %></td>
+    <td class="tools"><%= link_to image_tag('bin_closed.png'), article, :confirm => 'Are you sure?', :method => :delete, :title => "Delete" %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+</div>
+
+<%= pluralize(@articles.count, "article") %>

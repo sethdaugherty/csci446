@@ -1,0 +1,36 @@
+<div class="header">
+    <h1>Articl.es</h1>
+    <p class="tagline">... what's "Articl" in Spanish anyway?</p>
+</div>
+
+
+<div class="toolbar">
+    <ul>
+        <li>
+            <%= link_to(image_tag("arrow_left.png") + ' List all articles', articles_path, :title => "Back") %>
+        </li>
+        <li>
+            <%= link_to(image_tag("page_edit.png") + ' Edit', edit_article_path(@article), :title => "Edit" ) %>
+        </li>
+        <li>
+            <%= link_to(image_tag("bin_closed.png") + ' Delete', @article, :confirm => 'Are you sure?', :method => :delete, :title => "Delete") %>
+        </li>
+        <li>
+            <%= mail_to( "", image_tag("email.png") + " Email", :subject => @article.title, :body =>  link_to( @article.title, "http://" + request.host_with_port + article_path), :title => "Email article") %>
+        </li>
+    </ul>
+</div>
+
+<h2><%=h @article.title %></h2>
+   
+
+<p class="byline">
+  by <%=h @article.author %>, <%= @article.editedCount %> edits since 
+  <%=h @article.created_at.strftime("%b. %d, %Y") %>
+</p>
+
+<p>
+  <%= @article.body.gsub(/\n/, '<br />') %>
+</p>
+
+
