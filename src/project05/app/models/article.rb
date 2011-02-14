@@ -13,4 +13,8 @@ class Article < ActiveRecord::Base
         errors.add(:author, 'can\'t be Sally') if author =~ /\b[Ss]ally\b/
     end
 
+		def cleansed_body
+				return body.gsub(/\n/, '<br />')
+		end
+
 end
