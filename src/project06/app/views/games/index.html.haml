@@ -1,0 +1,29 @@
+%table
+  %tr
+    %th Title
+    %th Rating
+    %th User
+
+  - @games.each do |game|
+    %tr
+      - if member?
+        %td= link_to game.title, edit_game_path(game)
+      - else
+        %td= game.title
+
+      %td= game.rating 
+      %td
+        = game.created_at.to_s(:game)
+        by
+        - if game.user == current_user
+          me
+        - else
+          = game.user.full_name
+
+%hr
+= will_paginate @articles
+%hr
+
+%br
+= link_to 'New game', new_game_path
+

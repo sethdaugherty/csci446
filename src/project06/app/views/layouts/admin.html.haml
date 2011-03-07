@@ -1,0 +1,23 @@
+%html
+  %head
+    %title= yield(:title)
+    = stylesheet_link_tag "application", :media => "all"
+    = yield(:head)
+
+  %body
+    %h1 asdfasdfasdfasdfasdfasf
+    - if current_user
+      = current_user.fname + " " + current_user.lname
+      = link_to "Edit Profile", edit_admin_user_path(:current)
+      = link_to "Logout", logout_path
+    - else
+      = link_to "Register", new_admin_user_path
+      = link_to "Login", login_path
+
+    - if flash[:notice]
+      %p.green= flash[:notice]
+    - if flash[:error]
+      %p.red= flash[:error]
+
+    %h1= yield(:title)
+    = yield

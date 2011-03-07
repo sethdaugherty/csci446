@@ -1,0 +1,11 @@
+%table
+  %tr
+    %th Name
+    %th Number of users
+  - for role in @roles
+    %tr
+      %td= role.name
+      %td= num_users(role)
+      %td= link_to "Show", [:admin, role]
+      %td= link_to "Edit", edit_admin_role_path(role)
+%p= link_to "New Roles", new_admin_role_path

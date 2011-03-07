@@ -1,0 +1,24 @@
+.header
+	%h1 Articl.es
+	%p.tagline ... not just for the country of Spain
+
+= link_to 'Back', articles_path, :title => "Back to previous page" 
+
+%h2 Creating a New Article
+
+- form_for(@article) do |f| 
+	= f.error_messages 
+
+	%p
+		= f.label :title 
+		%br 
+		= f.text_field :title 
+	%p
+		= f.label :author_id 
+		%br
+		= f.collection_select(:author_id, ArticlesController.get_authors, :id, :name) 
+	%p
+		= f.label :body 
+		%br 		
+		= f.text_area :body 
+	%p= f.submit 'Create'

@@ -1,0 +1,15 @@
+%table
+    %tr
+        %th Name
+        %th Username
+        %th Last Login
+        %th Number of Games
+    - @users.each do |user|
+        %tr
+            %td= link_to user.fname + " " + user.lname, edit_admin_user_path(user)
+            %td= user.username
+            %td= user.last_login_at
+            - if admin?
+                %td
+                    = get_game_count(user.id)
+

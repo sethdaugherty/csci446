@@ -1,0 +1,104 @@
+/** Lets declare some SASS variables */
+body {
+  background-color: #fff;
+  color: #333; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  width: 920px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: #000; }
+  a:visited {
+    color: #666; }
+  a:hover {
+    color: #fff;
+    background-color: #000; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+  #errorExplanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    background-color: #c00;
+    color: #fff; }
+  #errorExplanation p {
+    color: #333;
+    margin-bottom: 0;
+    padding: 5px; }
+  #errorExplanation ul li {
+    font-size: 12px;
+    list-style: square; }
+
+/*
+ Start of my custom styles
+*/
+.header {
+  width: 900px;
+  margin: 0px auto 15px; }
+
+h1 {
+  margin: 0px; }
+
+.tagline {
+  padding: 0px;
+  margin: 0px auto; }
+
+.toolbar ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px; }
+.toolbar li {
+  display: inline;
+  padding: 10px; }
+.toolbar a {
+  text-decoration: none; }
+  .toolbar a:hover {
+    text-decoration: underline;
+    background: none;
+    color: #000; }
+
+table.articles {
+  width: 920px; }
+  table.articles a:hover {
+    background: none;
+    text-decoration: underline; }
+  table.articles th, table.articles td {
+    padding: 4px; }
+  table.articles th {
+    color: #fff;
+    background: #2e3784; }
+  table.articles .row1 {
+    background: #fff; }
+  table.articles .row2 {
+    background: #d5d7f1; }
+  table.articles .tools {
+    background: #fff;
+    width: 30px; }
+
+.tableWrapper {
+  width: 920px; }
+
+.byline h2 {
+  display: inline;
+  margin-right: 30px; }

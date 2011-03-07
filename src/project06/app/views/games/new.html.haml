@@ -1,0 +1,35 @@
+- form_for(@game) do |f|
+  = f.error_messages
+
+  %p
+    = f.label :title
+    %br
+    = f.text_field :title
+  
+    %p
+      = f.radio_button :rating, "Amazing"
+      = f.label "Amazing"
+      %br
+      = f.radio_button :rating, "Good"
+      = f.label "Good"
+      %br
+      = f.radio_button :rating, "Meh"
+      = f.label "Meh"
+      %br
+      = f.radio_button :rating, "Horrible"
+      = f.label "Horrible"
+      %br
+
+  
+  - if admin?
+    %p
+      = f.label :user_id
+      %br
+      = f.collection_select(:user_id, Admin::UsersController.get_users, :id, :full_name)
+  - else
+    = f.hidden_field :user_id
+
+  %p
+    = f.submit 'Create'
+
+= link_to 'Back', games_path

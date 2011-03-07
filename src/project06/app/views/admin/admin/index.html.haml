@@ -1,0 +1,20 @@
+%h1 Listing games
+
+%table
+  %tr
+    %th Title
+    %th Rating
+    %th User
+
+  - @games.each do |game|
+    %tr
+      %td= game.title
+      %td= game.rating
+      %td= game.user_id
+      %td= link_to 'Show', game 
+      %td= link_to 'Edit', edit_game_path(game)
+      %td= link_to 'Destroy', game, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+- link_to 'New game', new_game_path

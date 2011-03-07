@@ -1,0 +1,16 @@
+%p
+  %strong Title:
+  = @game.title
+
+%p
+  %strong Rating:
+  =h @game.rating
+
+%p
+  %strong User:
+  =h @game.user.full_name
+
+
+= link_to 'Edit', edit_game_path(@game) 
+|
+= link_to 'Back', games_path

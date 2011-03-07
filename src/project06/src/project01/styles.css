@@ -1,0 +1,118 @@
+body {
+	background: #aaa;
+	padding: 0px;
+	margin: 0px;
+	font-family: helvetica, verdana, sans-serif;
+}
+
+div.wrapper {
+	width: 1008px;
+	border: 1px solid black;
+	margin: 0px auto;
+}
+
+#header-wrapper {
+	margin: 0px;
+	padding: 0px;
+}
+
+#header {
+	background: #ccc;
+	padding: 7px 10px;
+}
+
+#header h3 {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	font-size: 1.95em;
+	letter-spacing: -1px;
+}
+
+p.tagline {
+	margin: -6px 0px 0px;
+	padding: 0;
+	color: #666;
+	font-size: 0.82em;
+}
+
+#navigation {
+	background: #000;
+	margin: 0;
+	padding: 8px 10px;
+}
+
+#navigation a, #navigation a:visited {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0;
+	margin-right: 25px;
+	font-size: 1.03em;
+}
+
+#navigation a:hover {
+	color: #999;
+}
+
+#content-wrapper {
+	background: #fcfcfc;
+	padding: 10px;
+}
+
+.rightBar {
+	width: 337px;
+	display: block;
+	float: right;
+	background: #f0f1ff;
+	padding: 1px 4px;
+}
+
+.rightBar h2 {
+	font-size: 1.18em;
+	font-weight: bold;
+	margin: 0;
+}
+
+.rightBar p {
+	margin: 14px 0;
+}
+
+h1 {
+	font-size: 1.48em;
+	padding: 0px;
+	margin: -4px 0px 0px;
+}
+
+form {
+	margin: 14px 0px;
+}
+
+form div {
+	margin-bottom: 20px;
+}
+
+label {
+	width: 200px;
+	float: left;
+}
+
+select {
+	font-size: .74em;
+}
+
+#feelMe {
+	margin-left: 200px;
+}
+
+#footer {
+	background: #f0f0f0;	
+	text-align: center;
+	padding: 8px;
+}
+
+#footer p {
+	margin: 0px;
+	padding: 0px;
+	font-size: .8em;
+}
